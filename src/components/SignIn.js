@@ -21,7 +21,7 @@ function Copyright() {
       target="_blank"
       rel="noopener"
       >
-        あおいまる
+        aoimaru
       </Link>{' '}
       {/* {new Date().getFullYear()}
       {'.'} */}
