@@ -52,8 +52,10 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn({ setName }) {
   const classes = useStyles();
   const [disabled, setDisabled] = useState(true);
-
   const [string, setString] = useState('');
+
+  const [isComposed, setIsComposed] = useState(false);
+
   console.log({ string });
 
   useEffect(() => {
@@ -84,12 +86,16 @@ export default function SignIn({ setName }) {
             autoFocus
             onChange={(e) => setString(e.target.value)}
             onKeyDown={(e) => {
+                if (isComposed) return;
+                
                 console.log({key: e.key});
                 if(e.key === 'Enter'){
-                    setName(e.target.value);
+                    // setName(e.target.value);
                     e.preventDefault();
                 }
             }}
+            onCompositionStart={() => setIsComposed(true)}
+            onCompositionEnd={() => setIsComposed(false)}
           />
           {/* <TextField
             variant="outlined"
