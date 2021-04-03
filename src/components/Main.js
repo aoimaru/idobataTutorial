@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     root: {
         display: 'grid',
         height: '100vh',
-        gridTemplateRows: '1tr auto',
+        gridTemplateRows: '1fr auto',
       },
 });
 
