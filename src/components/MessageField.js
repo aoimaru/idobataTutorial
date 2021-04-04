@@ -24,7 +24,7 @@ const MessageField = ({ inputEl, name, setText, text}) => {
             console.log({key: e.key});
             if(e.key === 'Enter'){
                 // setName(e.target.value);
-                pushMessage({ name: 'aoimaru', text });
+                pushMessage({ name, text });
                 setText('');
                 e.preventDefault();
             }

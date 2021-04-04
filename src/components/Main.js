@@ -21,7 +21,7 @@ const Main = ({ name }) => {
         < MessageList />
         < MessageInputFeild name={name} />
     </div>
-    )
+    );
 };
 
 
